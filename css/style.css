@@ -1,0 +1,53 @@
+
+  body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    color: #333333;
+  }
+
+  head {
+    background-color: #f2f2f2;
+  }
+
+  .navbar {
+    color: #ffffff;
+    border: 1px solid #cccccc;
+  }
+
+  nav.nav-tabs a.nav-link {
+    color: #555555 
+  }
+
+  .dropdown-menu {
+    background-color: #555555;
+  }
+
+  .dropdown-menu a.dropdown-divider {
+    border-top-color: #ffffff;
+  }
+
+  h1, h3 {
+    color: #333333;
+    font-family: 'Monsterrat', sans-serif;
+    font-weight: 800;
+  }
+
+  .container {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .h3 {
+    color: #666666;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  #minute {
+    margin-top: 20px;
+    font-size: 24px;
+  }
