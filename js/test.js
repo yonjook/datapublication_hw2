@@ -14,4 +14,21 @@ function displayMinute() {
     minuteDiv.innerText = `It has been ${totalMinutes} minutes since midnight.`;
   }
   
+function showPrompt() {
+    const name = prompt("What's your name?");
+    if (name !== null && name !== "") {
+      alert(`Thank you! Welcome to my website, ${name}!`);
+    }
+}
 
+function sortArray() {
+    const input = prompt('Enter a few numbers separated by commas:');
+    const sortedArray = parseArray(input);
+    alert(sortedArray);
+}
+
+function parseArray(input) {
+    const arr = input.split(',').map(Number);
+    arr.sort(function (a,b) {return a - b });
+    return arr;
+}

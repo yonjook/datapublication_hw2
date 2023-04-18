@@ -1,9 +1,10 @@
 <html>
-
 <head>
     <title>Map API Sandbox</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="js/wikiAPI.js"></script>
     <style>
       #mapid {
         height: 500px;
@@ -11,10 +12,13 @@
     </style>
   </head>
   <body>
+    <h1> Welcome to my Sandbox page! </h1>
+
+    <div class="container mt-3 mb-5">
     <h1> Welcome to Seoul, South Korea! </h1>
     <p> I was born in Seoul, South Korea. Seoul is known for its rich history, vibrant culture, and modern architecture!</p>
     <div id="mapid"></div>
-    <<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="" lang="en"></script>
 
     <script>
@@ -30,5 +34,45 @@
         .bindPopup("<b>Hello, Seoul!</b><br />Welcome to South Korea.")
         .openPopup();
     </script>
+    </div>
+
+  <div class="container mt-3 mb-5">
+    <h1> Wiki API </h1>
+    <form>
+      <div class="row">
+        <div class='col'>
+          <input id ="searchTerm" type="text" class="form-control" placeholder="Enter here: ">
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-primary my-3" onclick="wikiAPI()">Search</button>
+        </div>
+      </div>
+    </form>
+    <div class="container mb-5">
+      <div class="container" id="wiki"></div>
+    </div> 
+
+    <div class="container mt-3 mb-5">
+      <h1> Lorem Ipsum</h1>
+      <link rel="stylesheet" href="css/loremipsum.css">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="drop-cap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque commodo nisi, at viverra arcu sollicitudin eu. Fusce tincidunt quam id massa volutpat bibendum. Sed vitae sagittis dolor. Aliquam erat volutpat. Curabitur eu libero vel sapien suscipit pharetra non et nisi. Aenean non quam non sapien vulputate placerat. </p>
+          </div>
+          <div class="col-md-6">
+            <p class="drop-cap">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer id lacus at justo vehicula commodo a in dui. Morbi ac orci lacus. Sed feugiat sapien eu leo aliquet interdum. Donec nec tellus ut ex dignissim sagittis. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OCHRE -->
+    <div class="container mt-3 mb-5">
+      <h1> OCHRE API </h1>
+      <h3> Coming soon...</h3>
+
+    </div>
+  </div>
   </body>
 </html>
