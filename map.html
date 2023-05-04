@@ -5,13 +5,17 @@
     <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
     <script src="js/wikiAPI.js"></script>
+    <script src="js/ochreAPI.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <style>
       #mapid {
         height: 500px;
       }
     </style>
   </head>
-  <body>
+  
+  <body onload ="loadXML();">
     <h1> Welcome to my Sandbox page! </h1>
 
     <div class="container mt-3 mb-5">
@@ -70,7 +74,21 @@
     <!-- OCHRE -->
     <div class="container mt-3 mb-5">
       <h1> OCHRE API </h1>
-      <h3> Coming soon...</h3>
+      <h3 id="projectTitle"></h3>
+      <h4 id="setTitle"></h4>
+      <div id="setDescription"></div>
+      <a id="license" href=""></a>
+      <table class="table table-strped order-table" id="ochreTable">
+        <thread class="thread-dark" id="ochreTableColumns">
+            <tr>
+                <th style="text-align: left; width: 20%">Name</th>
+                <th style="text-align: left; width: 20%">Description</th>
+            </tr>
+        </thread>
+        <tbody id="ochreTableBody">
+      </table>
+        </tbody>
+
 
     </div>
   </div>

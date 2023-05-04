@@ -12,14 +12,17 @@ function wikiAPI() {
         for (var i in pages) {
             var newDiv = document.createElement("div");
             newDiv.setAttribute('class', 'row h4');
+            var newLink = document.createElement('a');
+            newLink.setAttribute('href', 'https://en.wikipedia.org/?curid=' + pages[i].pageid);
+            newLink.setAttribute('target', '_blank');
+            newLink.innerText = pages[i].title;
+            newDiv.appendChild(newLink);
             document.getElementById("wiki").appendChild(newDiv);
-            newDiv.innerText = pages[i].title;
-
         };
     }
 
     connect.send();
 }
-    var searchButton = document.querySelector(".btn-primary");
+var searchButton = document.querySelector(".btn-primary");
   searchButton.addEventListener("click", wikiAPI);
 
