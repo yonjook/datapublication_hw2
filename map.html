@@ -1,5 +1,14 @@
 <html>
 <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <title>Map API Sandbox</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/map.css">
@@ -16,6 +25,21 @@
   </head>
   
   <body onload ="loadXML();">
+    <nav class="nav nav-tabs">
+      <li class="nav-item">
+          <a class="nav-link" href="index.html">HOME</a>
+      </li>
+      <li>
+      <a class="nav-link active" aria-current="page" href="map.html">Data</a>
+      </li>
+      <li>
+      <a class="nav-link"  href="about.html">About</a>
+      </li>
+      <li>
+      <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+  </nav>
+  
     <h1> Welcome to my Sandbox page! </h1>
 
     <div class="container mt-3 mb-5">
@@ -40,57 +64,71 @@
     </script>
     </div>
 
-  <div class="container mt-3 mb-5">
-    <h1> Wiki API </h1>
-    <form>
-      <div class="row">
-        <div class='col'>
-          <input id ="searchTerm" type="text" class="form-control" placeholder="Enter here: ">
+<!-- Wiki API -->
+  <div class="container mt-3">
+    <div class="row">
+      <div class='col'>
+        <div class="container mb-5">
+          <h1> Wiki API </h1>
+          <form>
+            <div class="row">
+              <div class='col'>
+                <input id ="searchTerm" type="text" class="form-control" placeholder="Enter here: ">
+                <div class="input-group-append">
+                  <button type="button" class="btn btn-primary my-3" onclick="wikiAPI()">Search</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="container mb-5">
+                    <div id="wiki"></div>
+                </div>
+            </div>
         </div>
-        <div class="col-auto">
-          <button type="button" class="btn btn-primary my-3" onclick="wikiAPI()">Search</button>
-        </div>
-      </div>
-    </form>
-    <div class="container mb-5">
-      <div class="container" id="wiki"></div>
-    </div> 
 
-    <div class="container mt-3 mb-5">
-      <h1> Lorem Ipsum</h1>
-      <link rel="stylesheet" href="css/loremipsum.css">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p class="drop-cap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque commodo nisi, at viverra arcu sollicitudin eu. Fusce tincidunt quam id massa volutpat bibendum. Sed vitae sagittis dolor. Aliquam erat volutpat. Curabitur eu libero vel sapien suscipit pharetra non et nisi. Aenean non quam non sapien vulputate placerat. </p>
-          </div>
-          <div class="col-md-6">
-            <p class="drop-cap">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer id lacus at justo vehicula commodo a in dui. Morbi ac orci lacus. Sed feugiat sapien eu leo aliquet interdum. Donec nec tellus ut ex dignissim sagittis. </p>
-          </div>
+<!-- Lorem Ipsum -->
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="container mb-5">
+          <h1> Lorem Ipsum</h1>
+          <link rel="stylesheet" href="css/loremipsum.css">
+          <div class="row">
+            <div class="col-md-12">
+              <p class="drop-cap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque commodo nisi, at viverra arcu sollicitudin eu. Fusce tincidunt quam id massa volutpat bibendum. Sed vitae sagittis dolor. Aliquam erat volutpat. Curabitur eu libero vel sapien suscipit pharetra non et nisi. Aenean non quam non sapien vulputate placerat. </p>
+            </div>
+            <div class="col-md-12">
+              <p class="drop-cap">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer id lacus at justo vehicula commodo a in dui. Morbi ac orci lacus. Sed feugiat sapien eu leo aliquet interdum. Donec nec tellus ut ex dignissim sagittis. </p>
+            </div>
+            <div class="col-md-12">
+              <p class="drop-cap">Sed tincidunt pharetra consequat. Ut eu diam aliquet, ultricies diam ut, lobortis tellus. Nunc sit amet arcu diam. Duis in erat ultricies, imperdiet augue ac, sodales nibh. Aliquam a nisl tortor. Cras iaculis purus ut ligula molestie pulvinar. Vestibulum nunc elit, posuere eget quam ut, pulvinar imperdiet velit. Sed consectetur mauris nec metus convallis pulvinar. Nulla eu auctor urna. Nam in nisi velit.</p>
+            </div>
+            <div class="col-md-12">
+              <p class="drop-cap">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce vehicula eros in ante congue vehicula. Nam enim leo, pulvinar congue ultricies eget, facilisis iaculis erat. Vestibulum viverra placerat nisi sit amet cursus. Maecenas viverra urna sit amet purus ullamcorper, eget gravida metus accumsan. Vestibulum porta nibh nec tortor facilisis, eget eleifend lorem gravida. Nullam ac viverra lorem, sit amet aliquet libero. Nulla fringilla tincidunt sollicitudin.</p>
+            </div>
         </div>
       </div>
     </div>
 
-    <!-- OCHRE -->
-    <div class="container mt-3 mb-5">
-      <h1> OCHRE API </h1>
-      <h3 id="projectTitle"></h3>
-      <h4 id="setTitle"></h4>
-      <div id="setDescription"></div>
-      <a id="license" href=""></a>
-      <table class="table table-strped order-table" id="ochreTable">
-        <thread class="thread-dark" id="ochreTableColumns">
-            <tr>
-                <th style="text-align: left; width: 20%">Name</th>
-                <th style="text-align: left; width: 20%">Description</th>
-            </tr>
-        </thread>
-        <tbody id="ochreTableBody">
-      </table>
-        </tbody>
-
-
-    </div>
-  </div>
-  </body>
+<!-- OCHRE -->
+  <div class="col-md-6">
+   <div class="container mb-5">
+    <h1> OCHRE API </h1>
+    <link rel="stylesheet" href="css/ochre.css">
+    <h3 id="projectTitle"></h3>
+    <h4 id="setTitle"></h4>
+    <div id="setDescription"></div>
+    <a id="license" href=""></a>
+    <table class="table table-strped order-table" id="ochreTable">
+      <thread class="thread-dark" id="ochreTableColumns">
+        <tr>
+            <th style="text-align: left; width: 20%">Name</th>
+            <th style="text-align: left; width: 20%">Description</th>
+        </tr>
+    </thread>
+    <tbody id="ochreTableBody"></tbody>
+  </table>
+</div>
+</div>
+</body>
 </html>

@@ -1,0 +1,37 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Great+Vibes&family=Kaushan+Script&display=swap');
+
+/* Table Styling */
+#ochreTableBody {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 1.2em;
+}
+
+.ochreTableRows {
+  background-color: #f8f8f8;
+}
+
+.ochreTableRows:hover {
+  background-color: #eaeaea;
+}
+
+#td_name_0 {
+  font-family: 'Great Vibes', cursive;
+  color: #7e003f;
+  font-size: 1.5em;
+}
+
+#td_desc_0 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.2em;
+  color: #333;
+}
+
+#license {
+  color: #7e003f;
+  font-style: italic;
+}
+
+#license:hover {
+  color: #ae246d;
+}

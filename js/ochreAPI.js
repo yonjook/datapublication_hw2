@@ -35,15 +35,18 @@ function listTexts(sourceXML) {
     console.log(sourceXML);
     var textList = sourceXML.getElementsByTagName('text');
     console.log(textList);
+
     for (i = 0; i < textList.length; i++) {
         var tr = document.createElement('tr');
         tr.setAttribute('class', 'ochreTableRows');
         tr.setAttribute('id', 'row_' + i);
         document.getElementById('ochreTableBody').appendChild(tr);
+
         var td = document.createElement('td');
         td.setAttribute('id', 'td_name_' + i);
         td.textContent = textList[i].children[0].children[0].innerHTML;
         document.getElementById('row_' + i).appendChild(td);
+        
         var td2 = document.createElement('td');
         td2.setAttribute('id', 'td_desc_' + i);
         td2.textContent = textList[i].children[3].innerHTML;
